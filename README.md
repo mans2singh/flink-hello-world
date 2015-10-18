@@ -1,5 +1,7 @@
 # Flink Install and Examples
 
+These examples are based flink 0.9.1 sample set.
+
 ## Prerequisites
 
 # Environment Setup
@@ -10,25 +12,8 @@ Download Flink (0.9.1)
 
 http://www.apache.org/dyn/closer.lua/flink/flink-0.9.1/flink-0.9.1-bin-hadoop1.tgz
 
-Install Git, Maven if needed:
-
-```shell
-$ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-
-% brew install git
-% brew install git-flow-avh
-
-% brew install maven
-```
 
 ## Installation
-
-Install Hadoop and Hive:
-
-```shell
-$ brew install hadoop
-$ brew install hive
-```
 
 ## Configuration
 
@@ -44,12 +29,17 @@ mkdir -p ~/Documents/projects/intro
 tar -xvf flink*.gz
 ```
 
-Start flink job manater
-```shell
-$ ./start-local.sh
-```
-
 ## Flink Examples Setup
+
+From Flink Documentation - https://ci.apache.org/projects/flink/flink-docs-release-0.9/apis/programming_guide.html
+
+Steps involved in a flink application
+
+1. Create an ExecutionEnvironment
+2. Initialize input data
+3. Apply operations - transformations/filtering/joins/etc
+4. Specify how to output
+5. Execute the application
 
 Build flink-hello-world project:
 
@@ -60,9 +50,9 @@ $ mvn clean package
 
 ## Run the WordCountBatch Example
 
-./flink run  -c com.mans2singh.intro.big.data.WordCountSocketStream /Users/msingh2/Documents/projects/intuit/intro/flink-hello-world/target/flink-hello-world-1.0-SNAPSHOT.jar localhost 9999
+./flink run  -c com.mans2singh.intro.big.data.WordCountSocketStream ~/flink-hello-world/target/flink-hello-world-1.0-SNAPSHOT.jar localhost 9999
 
 
 ## Run the WordCountStream Example
 
-./flink run  -c com.mans2singh.intro.big.data.WordCountSocketStream ~Documents/projects/intuit/intro/flink-hello-world/target/flink-hello-world-1.0-SNAPSHOT.jar localhost 9999
+./flink run  -c com.mans2singh.intro.big.data.WordCountSocketStream ~/flink-hello-world-1.0-SNAPSHOT.jar localhost 9999
