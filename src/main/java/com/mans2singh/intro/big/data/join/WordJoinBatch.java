@@ -12,10 +12,21 @@ import org.slf4j.LoggerFactory;
 import com.mans2singh.intro.big.data.WordMapper;
 import com.mans2singh.intro.big.data.WordSplitter;
 
+/**
+ * This example show how to join word counts from two files
+ * 
+ * @author msingh2
+ */
 public class WordJoinBatch {
-	
+
+	/** Logger for class */
 	protected final static Logger LOGGER = LoggerFactory.getLogger(WordJoinBatch.class);
 	
+	/**
+	 * Driver class
+	 * @param args two files to be joined
+	 * @throws Exception
+	 */
 	public static void main(String[] args) throws Exception {
 
 		LOGGER.info("Arguments were " + Arrays.toString(args));
