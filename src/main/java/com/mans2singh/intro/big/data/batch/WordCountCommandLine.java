@@ -1,4 +1,4 @@
-package com.mans2singh.intro.big.data;
+package com.mans2singh.intro.big.data.batch;
 
 import java.util.Arrays;
 
@@ -7,6 +7,8 @@ import org.apache.flink.api.java.ExecutionEnvironment;
 import org.apache.flink.api.java.tuple.Tuple2;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import com.mans2singh.intro.big.data.WordMapper;
 
 /**
  * This application reads a sentence from command line and counts the words in it 

@@ -1,4 +1,4 @@
-package com.mans2singh.intro.big.data;
+package com.mans2singh.intro.big.data.stream;
 
 import java.util.Arrays;
 
@@ -7,6 +7,9 @@ import org.apache.flink.streaming.api.datastream.DataStream;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import com.mans2singh.intro.big.data.WordMapper;
+import com.mans2singh.intro.big.data.WordSplitter;
 
 /**
  * This streaming application reads data from a socket and counts the words in it
