@@ -8,6 +8,7 @@ import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.mans2singh.intro.big.data.ArticleFilter;
 import com.mans2singh.intro.big.data.WordMapper;
 import com.mans2singh.intro.big.data.WordSplitter;
 

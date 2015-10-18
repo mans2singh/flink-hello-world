@@ -1,4 +1,4 @@
-package com.mans2singh.intro.big.data.stream;
+package com.mans2singh.intro.big.data;
 
 import org.apache.flink.api.common.functions.FilterFunction;
 
