@@ -7,11 +7,7 @@ These examples are based flink 0.9.1 sample set.
 # Environment Setup
 
 Confirm Java 1.7.*
-
-Download Flink (0.9.1)
-
-http://www.apache.org/dyn/closer.lua/flink/flink-0.9.1/flink-0.9.1-bin-hadoop1.tgz
-
+Confirm Maven installed
 
 ## Installation
 
@@ -22,11 +18,8 @@ export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Hom
 
 ...
 
-Create folder and untar flink gzip
-
 ```shell
 mkdir -p ~/Documents/projects/intro
-tar -xvf flink*.gz
 ```
 
 ## Flink Examples Setup
@@ -44,15 +37,41 @@ Steps involved in a flink application
 Build flink-hello-world project:
 
 ```shell
+$ cd ~/Documents/projects/intro
+
+$ git clone https://github.com/mans2singh/flink-hello-world.git flink-hello-world
+
 $ cd ~/flink-hello-world/
-$ mvn clean package
+$ mvn clean install
+
+$ mvn dependency:copy-dependencies
+$ export CP=$(find ./target/dependency/ | xargs | sed  's/ /:/g')
 ```
 
-## Run the WordCountBatch Example
+## Run the WordFilterCountCommandLine Example
 
-./flink run  -c com.mans2singh.intro.big.data.WordCountSocketStream ~/flink-hello-world/target/flink-hello-world-1.0-SNAPSHOT.jar localhost 9999
+java -cp $CP:./target/flink-hello-world-1.0-SNAPSHOT.jar com.mans2singh.intro.big.data.batch.WordFilterCountCommandLine "this is a test of the new system"
 
+(of,1)
+(test,1)
+(is,1)
+(for,1)
+(new,1)
+(company,1)
+(system,1)
+(this,1)
 
-## Run the WordCountStream Example
+## Run the WordFilterCountCommandLine Example
 
-./flink run  -c com.mans2singh.intro.big.data.WordCountSocketStream ~/flink-hello-world-1.0-SNAPSHOT.jar localhost 9999
+java -cp $CP:./target/flink-hello-world-1.0-SNAPSHOT.jar com.mans2singh.intro.big.data.batch.WordCountCommandLine "this is a test of the new system"
+
+(of,1)
+(for,1)
+(new,1)
+(is,1)
+(the,2)
+(test,1)
+(a,1)
+(company,1)
+(system,1)
+(this,1)
