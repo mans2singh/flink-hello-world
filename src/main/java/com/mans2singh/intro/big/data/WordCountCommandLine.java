@@ -8,12 +8,30 @@ import org.apache.flink.api.java.tuple.Tuple2;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * This application reads a sentence from command line and counts the words in it 
+ * 
+ * @author msingh2
+ *
+ */
 public class WordCountCommandLine {
 
+	/**
+	 * Word separator
+	 */
 	private static final String WORD_SEPARATOR = " ";
 	
+	/**
+	 * Logger for the class
+	 */
 	protected final static Logger LOGGER = LoggerFactory.getLogger(WordCountCommandLine.class);
 	
+	/**
+	 * Driver class 
+	 * @param args sentence
+	 * 
+	 * @throws Exception
+	 */
 	public static void main(String[] args) throws Exception {
 
 		LOGGER.info("Arguments were " + Arrays.toString(args));
@@ -34,7 +52,7 @@ public class WordCountCommandLine {
 				.groupBy(0)
 				.sum(1);
 
-		// Print the count
+		// Define the output an execute
 		counts.print();
 		
 	}
