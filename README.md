@@ -1,6 +1,6 @@
 # Flink Install and Examples
 
-These examples are based flink 0.9.1 documentation and sample set.
+These examples are based Flink version 0.9.1.
 
 ## Flink Documentation
 https://ci.apache.org/projects/flink/flink-docs-release-0.9/index.html
@@ -12,7 +12,6 @@ https://ci.apache.org/projects/flink/flink-docs-release-0.9/index.html
 3. Apply operations - transformations/filtering/joins/etc
 4. Specify how to output
 5. Execute the application
-
 
 ## Prerequisites
 
@@ -33,7 +32,7 @@ cd ~/Documents/projects/intro
 ## Check out flink-hello-world from github.com
 
 ```shell
-$ git clone https://github.com/mans2singh/flink-hello-world.git flink-hello-world
+git clone https://github.com/mans2singh/flink-hello-world.git flink-hello-world
 ```
 
 ## Build flink project
@@ -42,7 +41,7 @@ $ git clone https://github.com/mans2singh/flink-hello-world.git flink-hello-worl
 cd ~/flink-hello-world/
 mvn clean install
 ```
-## Setup eclipse IDE
+## Setup eclipse IDE (optional)
 
 ```shell
 mvn eclipse:eclipse
@@ -52,10 +51,10 @@ mvn eclipse:eclipse
 
 ```shell
 mvn dependency:copy-dependencies
-export CP=$(find ./target/dependency/ | xargs | sed  's/ /:/g')
+export CP=$(find ./target/dependency/ | xargs | sed  's/ /:/g'):./target/flink-hello-world-1.0-SNAPSHOT.jar
 ```
 
-## Run the WordCountSocketStream Example
+## Run the WordCountSocketStream example that counts words from a stream
 
 ### Run nc (netcat utility) in one terminal
 
@@ -66,21 +65,21 @@ nc -lk 9999
 ### Run the flink code in another terminal
 
 ```shell
-java -cp $CP:./target/flink-hello-world-1.0-SNAPSHOT.jar com.mans2singh.intro.big.data.stream.WordCountSocketStream localhost 9999
+java -cp $CP com.mans2singh.intro.big.data.stream.WordCountSocketStream localhost 9999
 ```
 (good,1)
 
 (this,2)
 
-## Run the WordDistinctCommandLine Example
+## Run the WordDistinctCommandLine example that produces distinct words
 
 ```shell
-java -cp $CP:./target/flink-hello-world-1.0-SNAPSHOT.jar com.mans2singh.intro.big.data.batch.WordDistinctCommandLine "this is the test of the new system"
+java -cp $CP com.mans2singh.intro.big.data.batch.WordDistinctCommandLine "this is the test of the new system"
 ```
-## Run the WordJoinBatch example
+## Run the WordJoinBatch example which joins two word counts from two files
 
 ```shell
-java -cp $CP:/Users/msingh2/Documents/projects/intuit/intro/flink-hello-world/target/flink-hello-world-1.0-SNAPSHOT.jar com.mans2singh.intro.big.data.join.WordJoinBatch file://$PWD/src/main/resources/joinFile1.txt file://$PWD/src/main/resources/joinFile2.txt
+java -cp $CP com.mans2singh.intro.big.data.join.WordJoinBatch file://$PWD/src/main/resources/joinFile1.txt file://$PWD/src/main/resources/joinFile2.txt
 ```
 ((john,2),(john,1))
 
@@ -92,10 +91,10 @@ java -cp $CP:/Users/msingh2/Documents/projects/intuit/intro/flink-hello-world/ta
 
 ((very,1),(very,1))
 
-## Run the WordFilterCountCommandLine example
+## Run the WordFilterCountCommandLine example that filters articles and counts rest of the words
 
 ```shell
-java -cp $CP:./target/flink-hello-world-1.0-SNAPSHOT.jar com.mans2singh.intro.big.data.batch.WordFilterCountCommandLine "this is a test of the new system"
+java -cp $CP com.mans2singh.intro.big.data.batch.WordFilterCountCommandLine "this is a test of the new system"
 ```
 
 (of,1)
@@ -114,10 +113,10 @@ java -cp $CP:./target/flink-hello-world-1.0-SNAPSHOT.jar com.mans2singh.intro.bi
 
 (this,1)
 
-## Run the WordCountCommandLine Example
+## Run the WordCountCommandLine example which counts words
 
 ```shell
-java -cp $CP:./target/flink-hello-world-1.0-SNAPSHOT.jar com.mans2singh.intro.big.data.batch.WordCountCommandLine "this is a test of the new system"
+java -cp $CP com.mans2singh.intro.big.data.batch.WordCountCommandLine "this is a test of the new system"
 ```
 
 (of,1)
