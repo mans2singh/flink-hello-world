@@ -15,7 +15,7 @@ import com.mans2singh.intro.big.data.WordMapper;
  * This application reads a sentence from command line, filters the articles 
  * and counts the words in it 
  * 
- * @author msingh2
+ * @author mans2singh
  *
  */
 public class WordFilterCountCommandLine {

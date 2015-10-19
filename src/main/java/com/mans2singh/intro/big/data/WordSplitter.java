@@ -5,7 +5,8 @@ import org.apache.flink.util.Collector;
 
 /**
  * Function to split a line into words
- * @author msingh2
+ * 
+ * @author mans2singh
  */
 public class WordSplitter implements FlatMapFunction<String,String> {
 

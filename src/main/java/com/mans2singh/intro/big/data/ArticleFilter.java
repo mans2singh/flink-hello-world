@@ -5,7 +5,7 @@ import org.apache.flink.api.common.functions.FilterFunction;
 /**
  * Class to filter out articles
  * 
- * @author msingh2
+ * @author mans2singh
  *
  */
 public class ArticleFilter implements FilterFunction<String> {

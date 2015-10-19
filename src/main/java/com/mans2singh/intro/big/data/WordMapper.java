@@ -6,7 +6,7 @@ import org.apache.flink.api.java.tuple.Tuple2;
 /**
  * Maps a word to a tuple with a count 1
  * 
- * @author msingh2
+ * @author mans2singh
  *
  */
 public class WordMapper implements MapFunction<String, Tuple2<String,Integer>> {

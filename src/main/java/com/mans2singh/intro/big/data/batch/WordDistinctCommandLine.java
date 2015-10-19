@@ -12,7 +12,7 @@ import org.slf4j.LoggerFactory;
 /**
  * This application shows how to extract distinct words from a line
  * 
- * @author msingh2
+ * @author mans2singh
  *
  */
 public class WordDistinctCommandLine {

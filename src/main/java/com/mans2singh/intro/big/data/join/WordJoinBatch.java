@@ -15,7 +15,7 @@ import com.mans2singh.intro.big.data.WordSplitter;
 /**
  * This example show how to join word counts from two files
  * 
- * @author msingh2
+ * @author mans2singh
  */
 public class WordJoinBatch {
 

@@ -15,7 +15,7 @@ import com.mans2singh.intro.big.data.WordSplitter;
 /**
  * Socket stream application with filtering
  * 
- * @author msingh2
+ * @author mans2singh
  *
  */
 public class WordCountWithFilterSocketStream {

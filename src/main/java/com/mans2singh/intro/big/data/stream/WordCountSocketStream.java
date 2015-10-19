@@ -14,7 +14,7 @@ import com.mans2singh.intro.big.data.WordSplitter;
 /**
  * This streaming application reads data from a socket and counts the words in it
  * 
- * @author msingh2
+ * @author mans2singh
  *
  */
 public class WordCountSocketStream {
