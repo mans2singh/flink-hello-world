@@ -17,7 +17,9 @@ https://ci.apache.org/projects/flink/flink-docs-release-0.9/apis/programming_gui
 ## Prerequisites
 
 Java 1.7.*
+
 Maven
+
 Git
 
 # Environment Setup
@@ -72,6 +74,7 @@ nc -lk 9999
 java -cp $CP:./target/flink-hello-world-1.0-SNAPSHOT.jar com.mans2singh.intro.big.data.stream.WordCountSocketStream localhost 9999
 ```
 (good,1)
+
 (this,2)
 
 ## Run the WordFilterCountCommandLine Example
@@ -88,12 +91,19 @@ java -cp $CP:./target/flink-hello-world-1.0-SNAPSHOT.jar com.mans2singh.intro.bi
 ```
 
 (of,1)
+
 (test,1)
+
 (is,1)
+
 (for,1)
+
 (new,1)
+
 (company,1)
+
 (system,1)
+
 (this,1)
 
 ## Run the WordFilterCountCommandLine Example
@@ -103,12 +113,21 @@ java -cp $CP:./target/flink-hello-world-1.0-SNAPSHOT.jar com.mans2singh.intro.bi
 ```
 
 (of,1)
+
 (for,1)
+
 (new,1)
+
 (is,1)
+
 (the,2)
+
 (test,1)
+
 (a,1)
+
 (company,1)
+
 (system,1)
+
 (this,1)
