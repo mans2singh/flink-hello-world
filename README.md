@@ -68,9 +68,25 @@ nc -lk 9999
 ```shell
 java -cp $CP com.mans2singh.intro.big.data.stream.WordCountSocketStream localhost 9999
 ```
-(good,1)
+#### Enter - this is a good day
 
-(this,2)
+(is,1)
+(a,1)
+(good,1)
+(day,1)
+(this,1)
+
+### Run the flink filter code in another terminal
+
+```shell
+java -cp $CP com.mans2singh.intro.big.data.stream.WordCountWithFilterSocketStream localhost 9999
+```
+#### Enter - this is a good day
+
+(is,1)
+(good,1)
+(day,1)
+(this,1)
 
 ## Run the WordDistinctCommandLine example that produces distinct words
 
