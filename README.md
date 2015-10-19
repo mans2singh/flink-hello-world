@@ -3,7 +3,7 @@
 These examples are based flink 0.9.1 documentation and sample set.
 
 ## Flink Documentation
-https://ci.apache.org/projects/flink/flink-docs-release-0.9/apis/programming_guide.html
+https://ci.apache.org/projects/flink/flink-docs-release-0.9/index.html
 
 ## Steps involved in a creating a Flink application
 
@@ -22,16 +22,7 @@ Maven
 
 Git
 
-# Environment Setup
-
-## Set up Java
-```shell
-export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home"
-
-...
-```
-
-## Set up examples
+## Set up project
 
 ```shell
 mkdir -p ~/Documents/projects/intro
@@ -39,10 +30,9 @@ mkdir -p ~/Documents/projects/intro
 cd ~/Documents/projects/intro
 ```
 
-## Check out flink-hello-world
+## Check out flink-hello-world from github.com
 
 ```shell
-
 $ git clone https://github.com/mans2singh/flink-hello-world.git flink-hello-world
 ```
 
@@ -52,8 +42,13 @@ $ git clone https://github.com/mans2singh/flink-hello-world.git flink-hello-worl
 cd ~/flink-hello-world/
 mvn clean install
 ```
+## Setup eclipse IDE
 
-## Prepare class path
+```shell
+mvn eclipse:eclipse
+```
+
+## Prepare class path for the examples
 
 ```shell
 mvn dependency:copy-dependencies
@@ -62,7 +57,7 @@ export CP=$(find ./target/dependency/ | xargs | sed  's/ /:/g')
 
 ## Run the WordCountSocketStream Example
 
-### Run nc in one terminal
+### Run nc (netcat utility) in one terminal
 
 ```shell
 nc -lk 9999
@@ -77,14 +72,27 @@ java -cp $CP:./target/flink-hello-world-1.0-SNAPSHOT.jar com.mans2singh.intro.bi
 
 (this,2)
 
-## Run the WordFilterCountCommandLine Example
+## Run the WordDistinctCommandLine Example
 
 ```shell
-java -cp $CP:./target/flink-hello-world-1.0-SNAPSHOT.jar com.mans2singh.intro.big.data.batch.WordFilterCountCommandLine "this is a test of the new system"
+java -cp $CP:./target/flink-hello-world-1.0-SNAPSHOT.jar com.mans2singh.intro.big.data.batch.WordDistinctCommandLine "this is the test of the new system"
 ```
+## Run the WordJoinBatch example
 
+```shell
+java -cp $CP:/Users/msingh2/Documents/projects/intuit/intro/flink-hello-world/target/flink-hello-world-1.0-SNAPSHOT.jar com.mans2singh.intro.big.data.join.WordJoinBatch file://$PWD/src/main/resources/joinFile1.txt file://$PWD/src/main/resources/joinFile2.txt
+```
+((john,2),(john,1))
 
-## Run the WordFilterCountCommandLine Example
+((is,2),(is,2))
+
+((happy,1),(happy,1))
+
+((mary,1),(mary,1))
+
+((very,1),(very,1))
+
+## Run the WordFilterCountCommandLine example
 
 ```shell
 java -cp $CP:./target/flink-hello-world-1.0-SNAPSHOT.jar com.mans2singh.intro.big.data.batch.WordFilterCountCommandLine "this is a test of the new system"
@@ -106,7 +114,7 @@ java -cp $CP:./target/flink-hello-world-1.0-SNAPSHOT.jar com.mans2singh.intro.bi
 
 (this,1)
 
-## Run the WordFilterCountCommandLine Example
+## Run the WordCountCommandLine Example
 
 ```shell
 java -cp $CP:./target/flink-hello-world-1.0-SNAPSHOT.jar com.mans2singh.intro.big.data.batch.WordCountCommandLine "this is a test of the new system"
