@@ -1,9 +1,5 @@
 # Introduction to Big Data Fall 2015
 
-## Contact information
-
-For any questions, please contact us at ibdfall2015@intuit.com
-
 # Flink Intro
 
 1. Flink is a data processing framework.  
