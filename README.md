@@ -147,7 +147,7 @@ java -cp $CP com.mans2singh.intro.big.data.batch.WordFilterCountCommandLine "thi
 (is,1)
 
 
-## Run the command line word count example which counts words in a sentence from command line
+## Run the command line word count example which counts words in a sentence passed in the command line
 
 ```shell
 java -cp $CP com.mans2singh.intro.big.data.batch.WordCountCommandLine "this is a test of the new system"
