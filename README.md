@@ -13,7 +13,7 @@ https://ci.apache.org/projects/flink/flink-docs-release-0.9/index.html
 
 These examples are based Flink version 0.9.1.
 
-## Steps involved in a creating a Flink application
+## Steps involved in a creating a Flink application (from Flink Documentation)
 
 1. Create an ExecutionEnvironment
 2. Initialize input data
