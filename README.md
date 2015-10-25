@@ -68,7 +68,7 @@ export CP=$(find ./target/dependency/ | xargs | sed  's/ /:/g'):./target/flink-h
 nc -lk 9999
 ```
 
-### Run the flink stream word count in another terminal
+### Run the flink stream word count in the terminal where we prepared the classpath for the flink-hello-world project
 
 ```shell
 java -cp $CP com.mans2singh.intro.big.data.stream.WordCountSocketStream localhost 9999
@@ -85,7 +85,7 @@ this is a good day
 (day,1)
 (this,1)
 
-### Run the flink word count with filter code in another terminal
+### Run the flink word count with filter code in the terminal where we prepared the flink-hello-world classpath
 
 ```shell
 java -cp $CP com.mans2singh.intro.big.data.stream.WordCountWithFilterSocketStream localhost 9999
