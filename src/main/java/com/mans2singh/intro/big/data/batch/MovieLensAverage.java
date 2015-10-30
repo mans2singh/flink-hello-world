@@ -96,7 +96,7 @@ public class MovieLensAverage {
 		DefaultJoin<Tuple3<String, Integer, Integer>, Tuple2<String, String>> results = 
 				movieIdAndRatingSum.join(itemInfo).where(0).equalTo(0);
 		
-		// Print the count
+		// Print the join results
 		results.print();
 		
 	}
