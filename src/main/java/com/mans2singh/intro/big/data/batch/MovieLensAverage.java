@@ -5,9 +5,7 @@ import java.util.Arrays;
 import org.apache.flink.api.common.functions.MapFunction;
 import org.apache.flink.api.java.DataSet;
 import org.apache.flink.api.java.ExecutionEnvironment;
-import org.apache.flink.api.java.operators.AggregateOperator;
 import org.apache.flink.api.java.operators.JoinOperator.DefaultJoin;
-import org.apache.flink.api.java.tuple.Tuple1;
 import org.apache.flink.api.java.tuple.Tuple2;
 import org.apache.flink.api.java.tuple.Tuple3;
 import org.slf4j.Logger;
@@ -15,7 +13,7 @@ import org.slf4j.LoggerFactory;
 
 /**
  * This application shows how to get average of rating counts from movie lens data set
- * 
+ * based on movie lens data 
  * @author mans2singh
  *
  */
